@@ -14,7 +14,6 @@ class ZhiweiSpider(CrawlSpider):
     )
     
     def parse_item(self, response):
-        print('-'*50)
         td = response.xpath("//tr[@class='even']")
         td+=(response.xpath("//tr[@class='odd']"))
         for each in td:
